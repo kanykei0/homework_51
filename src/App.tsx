@@ -19,16 +19,16 @@ function App() {
     });
   };
 
+  const renderNumbers = () => {
+    return numbers.map((i)=>{
+      return(<Ball key={i} number={i}/>);
+    });
+  };
+
   return (
     <div>
       <button onClick={generateRandomNumbers}>New numbers</button>
-      <div className='numbers-block'>
-        <Ball number={numbers[0]}/>
-        <Ball number={numbers[1]}/>
-        <Ball number={numbers[2]}/>
-        <Ball number={numbers[3]}/>
-        <Ball number={numbers[4]}/>
-      </div>
+      <div className='numbers-block'>{renderNumbers()}</div>
     </div>
   );
 };

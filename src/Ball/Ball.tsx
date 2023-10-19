@@ -1,10 +1,12 @@
+import '../App.css';
+
 interface Props{
     number: number;
 };
 
 const Ball = ({number}:Props) => {
     return(
-        <div className="ball">{number}</div>
+        <div className="ball"><p className='num'>{number}</p></div>
     );
 };
 
