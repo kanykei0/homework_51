@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Ball from './Ball/Ball';
 import './App.css';
 
 function App() {
@@ -21,7 +22,13 @@ function App() {
   return (
     <div>
       <button onClick={generateRandomNumbers}>New numbers</button>
-      <div className='numbers-block'>{numbers.join(', ')}</div>
+      <div className='numbers-block'>
+        <Ball number={numbers[0]}/>
+        <Ball number={numbers[1]}/>
+        <Ball number={numbers[2]}/>
+        <Ball number={numbers[3]}/>
+        <Ball number={numbers[4]}/>
+      </div>
     </div>
   );
 };
